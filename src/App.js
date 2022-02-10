@@ -4,6 +4,8 @@ import DayList from './component/DayList';
 import Header from './component/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import EmptyPage from './component/EmptyPage';
+import CreateWord from './component/CreateWord';
+import CreateDay from './component/CreateDay';
 
 // app 컴포넌트는 함수로 만들어져 있다.
 // 함수로 만들어진 컴포넌트는 함수형 컴포넌트라고 하고 모든 컴포넌트는 첫글자 대문자로 시작한다.
@@ -14,9 +16,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Routes>
+        <Routes>\
           <Route path="/" element={<DayList />} />
           <Route path="/day/:day" element={<Day />} />
+          <Route path="/create_word" element={<CreateWord />} />
+          <Route path="/create_day" element={<CreateDay />} />
         </Routes>
 
       </div >
